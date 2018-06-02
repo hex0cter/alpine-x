@@ -1,11 +1,16 @@
 FROM alpine:latest
 LABEL maintainer="Daniel Han"
 
-RUN apk --no-cache update
-RUN apk add --no-cache --virtual .build-deps \
+RUN apk --no-cache update \
+  && apk add --no-cache --virtual .build-deps \
   xvfb \
   supervisor \
-  openbox tint2 xeyes x11vnc ffmpeg
+  openbox \
+  tint2 \
+  xeyes \
+  x11vnc \
+  ffmpeg \
+  && rm -rf /var/cache/apk/*
 
 ADD config/tint2rc /root/.config/tint2/tint2rc
 ADD services /etc/supervisor.d
