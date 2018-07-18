@@ -1,5 +1,5 @@
 FROM alpine:latest
-LABEL maintainer="Daniel Han"
+LABEL maintainer="Daniel Han <hex0cter@gmail.com>"
 
 RUN apk --no-cache update \
   && apk add --no-cache --virtual .build-deps \
