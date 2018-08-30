@@ -1,0 +1,10 @@
+language: nodejs
+
+services:
+  - docker
+
+before_install:
+  - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USERNAME" --password-stdin
+
+script:
+  - docker build --pull --rm --squash --tag hex0cter/alpine-x:latest .
