@@ -8,3 +8,4 @@ before_install:
 
 script:
   - docker build --pull --rm --tag hex0cter/alpine-x:latest .
+  - docker push hex0cter/alpine-x:latest
