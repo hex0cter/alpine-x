@@ -8,5 +8,7 @@ before_install:
 
 script:
   - docker build --pull --rm --tag hex0cter/alpine-x:latest .
+  - docker tag hex0cter/alpine-x:latest hex0cter/alpine-x:$TRAVIS_COMMIT
+  - docker push hex0cter/alpine-x:$TRAVIS_COMMIT
   - docker push hex0cter/alpine-x:latest
   - rm -f $HOME/.docker/config.json
