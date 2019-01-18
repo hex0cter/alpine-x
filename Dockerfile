@@ -10,16 +10,18 @@ RUN apk --no-cache update \
   xeyes \
   x11vnc \
   ffmpeg \
+  ttf-opensans \
   && rm -rf /var/cache/apk/*
 
 ADD config/tint2rc /root/.config/tint2/tint2rc
 ADD services /etc/supervisor.d
 ADD entrypoint.sh /usr/local/bin
 
-# Default to UTF-8 file.encoding
-ENV LANG en_US.UTF-8
-ENV DISPLAY :99
-ENV DEBUG false
+ENV DISPLAY=:99 \
+    DEBUG=false \
+    LANG=en_US.UTF-8 \
+    LANGUAGE=en_US.UTF-8 \
+    LC_ALL=en_US.UTF-8
 
 EXPOSE 5900
 ENTRYPOINT entrypoint.sh
