@@ -11,9 +11,11 @@ RUN apk --no-cache update \
   x11vnc \
   ffmpeg \
   ttf-opensans \
+  xterm \
   && rm -rf /var/cache/apk/*
 
 ADD config/tint2rc /root/.config/tint2/tint2rc
+ADD config/openbox/menu.xml /root/.config/openbox/menu.xml
 ADD services /etc/supervisor.d
 ADD entrypoint.sh /usr/local/bin
 
