@@ -26,4 +26,4 @@ ENV DISPLAY=:99 \
     LC_ALL=en_US.UTF-8
 
 EXPOSE 5900
-ENTRYPOINT entrypoint.sh
+ENTRYPOINT ["/usr/local/bin/entrypoint.sh"]
