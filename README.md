@@ -1,7 +1,7 @@
 ## Alpine with Xvfb enabled
 ![Docker Automated build](https://img.shields.io/docker/automated/hex0cter/alpine-x)
 
-This image allows you to run any X/UI based program, such as a web browser, in a docker container.
+This image allows you to run any X/GUI based program, such as a web browser, inside a docker container.
 
 ## Pull the image
 ```
