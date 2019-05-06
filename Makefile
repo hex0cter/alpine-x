@@ -17,7 +17,7 @@ build:
 		.
 
 run:
-	@$(DOCKER) run -it --rm -p 5900:5900 -e DEBUG=true -v /tmp:/tmp --name $(IMAGE) $(REGISTRY)/$(IMAGE):latest
+	@$(DOCKER) run -it --rm -p 5900:5900 -e DEBUG=true -v /tmp:/tmp --name $(IMAGE) $(REGISTRY)/$(IMAGE):latest sh
 
 shell:
 	@$(DOCKER) exec -it $(IMAGE) sh
