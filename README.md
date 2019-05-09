@@ -1,5 +1,7 @@
 ## Alpine with Xvfb enabled
-![Docker Automated build](https://img.shields.io/docker/automated/hex0cter/alpine-x)
+[![Docker Cloud Automated build](https://img.shields.io/docker/cloud/automated/hex0cter/alpine-x)](https://hub.docker.com/r/hex0cter/alpine-x/builds)
+[![Docker Pulls](https://img.shields.io/docker/pulls/hex0cter/alpine-x)](https://hub.docker.com/r/hex0cter/alpine-x)
+
 
 This image allows you to run any X/GUI based program, such as a web browser, inside a docker container.
 
