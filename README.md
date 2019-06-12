@@ -1,6 +1,6 @@
 ## Alpine with Xvfb enabled
 [![Docker Cloud Automated build](https://img.shields.io/docker/cloud/automated/hex0cter/alpine-x)](https://hub.docker.com/r/hex0cter/alpine-x/builds)
-[![Docker Cloud Build Status](https://img.shields.io/docker/cloud/build/hex0cter/alpine-x)](https://hub.docker.com/r/hex0cter/alpine-x)
+[![Docker Cloud Build Status](https://img.shields.io/docker/cloud/build/hex0cter/alpine-x)](https://hub.docker.com/r/hex0cter/alpine-x/builds)
 [![Docker Pulls](https://img.shields.io/docker/pulls/hex0cter/alpine-x)](https://hub.docker.com/r/hex0cter/alpine-x)
 
 
