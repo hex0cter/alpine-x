@@ -1,4 +1,4 @@
-FROM alpine:latest
+FROM alpine:edge
 LABEL maintainer="Daniel Han <hex0cter@gmail.com>"
 
 RUN apk --no-cache update \
