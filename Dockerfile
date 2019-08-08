@@ -25,7 +25,5 @@ ENV DISPLAY=:99 \
     LANGUAGE=en_US.UTF-8 \
     LC_ALL=en_US.UTF-8
 
-RUN addgroup appgroup && adduser --disabled-password appuser appgroup
-
 EXPOSE 5900
 ENTRYPOINT ["/usr/local/bin/entrypoint.sh"]
