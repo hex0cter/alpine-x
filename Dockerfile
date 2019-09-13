@@ -19,6 +19,8 @@ ADD config/openbox/menu.xml /root/.config/openbox/menu.xml
 ADD services /etc/supervisor.d
 ADD entrypoint.sh /usr/local/bin
 
+RUN chmod -R 755 /etc && chmod 777 /var/log
+
 ENV DISPLAY=:99 \
     DEBUG=false \
     LANG=en_US.UTF-8 \
