@@ -12,6 +12,7 @@ RUN apk --no-cache update \
   ffmpeg \
   ttf-opensans \
   xterm \
+  sudo \
   && rm -rf /var/cache/apk/*
 
 ADD config/tint2rc /root/.config/tint2/tint2rc

@@ -1,7 +1,7 @@
 REGISTRY       = hex0cter
 IMAGE          = alpine-x
 VERSION        = $(shell git log --pretty=format:'%h' -n 1)
-
+USER_ID        = $(shell id -u)
 # docker might or might not require sudo
 # # detect this automatically to simplify life a bit
 DOCKER=$(shell docker info >/dev/null 2>&1 && echo "docker" || echo "sudo docker")
@@ -18,6 +18,9 @@ build:
 
 run:
 	@$(DOCKER) run -it --rm -p 5900:5900 -e DEBUG=true -v /tmp:/tmp --name $(IMAGE) $(REGISTRY)/$(IMAGE):latest sh
+
+run-as-non-root:
+	@$(DOCKER) run -it --rm -p 5900:5900 --env DEBUG=true --env USER_ID=$(USER_ID) -v /tmp:/tmp --name $(IMAGE) $(REGISTRY)/$(IMAGE):latest sh
 
 shell:
 	@$(DOCKER) exec -it $(IMAGE) sh
