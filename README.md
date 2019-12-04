@@ -8,7 +8,7 @@ This image allows you to run any X/GUI based program, such as a web browser, ins
 
 ## Pull the image
 ```
-docker push hex0cter/alpine-x:latest
+docker pull hex0cter/alpine-x:latest
 ```
 
 ## Start a container
